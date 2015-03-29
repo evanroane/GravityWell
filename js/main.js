@@ -1,18 +1,3 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
-
-body {
-  background: #222;
-  font-family: sans-serif;
-  font-style: italic;
-}
-
-</style>
-<body>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script>
-
 var now = new Date(d3.time.year.floor(new Date()));
 
 var spacetime = d3.select('body');
@@ -146,5 +131,3 @@ setInterval(function () {
     };
   });
 }, 1000);
-
-</script>
