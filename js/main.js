@@ -93,6 +93,7 @@ svg.append("circle")
 // Update the clock every second
 setInterval(function () {
   now = new Date();
+  //console.log(now);
 
   var interpolateEarthOrbitPosition = d3.interpolate(earthOrbitPosition.endAngle()(), (2 * Math.PI * d3.time.hours(d3.time.year.floor(now), now).length / d3.time.hours(d3.time.year.floor(now), d3.time.year.ceil(now)).length));
 
@@ -102,6 +103,7 @@ setInterval(function () {
 
   d3.transition().tween("orbit", function () {
     return function (t) {
+      //console.log(t);
       // Animate Earth orbit position
       d3.select(".earthOrbitPosition").attr("d", earthOrbitPosition.endAngle(interpolateEarthOrbitPosition(t)));
 
